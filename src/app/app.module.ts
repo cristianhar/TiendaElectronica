@@ -8,8 +8,6 @@ import { TiendaComponent } from './Components/tienda/tienda.component';
 import { CarritoComponent } from './Components/carrito/carrito.component';
 import { LoginComponent } from './Components/login/login.component';
 import { RegistroComponent } from './Components/registro/registro.component';
-import { NavbarComponent } from './Components/navbar/navbar.component';
-import { ProductDetailComponent } from './Components/product-detail/product-detail.component';
 import { ProductSearchComponent } from './Components/product-search/product-search.component';
 import { CheckoutComponent } from './Components/checkout/checkout.component';
 import { FormsModule, NgForm } from '@angular/forms';
@@ -23,8 +21,6 @@ import { FormsModule, NgForm } from '@angular/forms';
     CarritoComponent,
     LoginComponent,
     RegistroComponent,
-    NavbarComponent,
-    ProductDetailComponent,
     ProductSearchComponent,
     CheckoutComponent
   ],

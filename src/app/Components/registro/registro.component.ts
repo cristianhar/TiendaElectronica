@@ -7,4 +7,21 @@ import { Component } from '@angular/core';
 })
 export class RegistroComponent {
 
+  username = '';
+  password = '';
+  nombre = '';
+  apellido = '';
+  edad = '';
+  correo = '';
+  telefono = '';
+  direccion = '';
+  fecha = '';
+  genero = '';
+
+  constructor() { }
+
+  onSubmit(): void {
+  
+    alert('Registro exitoso');
+  }
 }
