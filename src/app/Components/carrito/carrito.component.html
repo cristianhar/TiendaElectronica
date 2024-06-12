@@ -1,1 +1,8 @@
-<p>carrito works!</p>
+<h1>Carrito de Compras</h1>
+<div *ngFor="let item of cartItems">
+  <h2>{{ item.product.name }}</h2>
+  <p>{{ item.product.price }}</p>
+  <p>Cantidad: {{ item.quantity }}</p>
+  <button (click)="removeFromCart(item.product.id)">Eliminar</button>
+</div>
+<button (click)="checkout()">Proceder al Pago</button>
