@@ -37,7 +37,7 @@ export class ProductService {
     { id: 27, name: 'Proyector', price: 800000, description: 'Un proyector portátil con resolución Full HD, brillo de 3000 lúmenes y conectividad HDMI.', imageUrl: 'https://http2.mlstatic.com/D_NQ_NP_976712-MLA73686209121_122023-O.webp', stock: 10 },
     { id: 28, name: 'Batería externa', price: 150000, description: 'Una batería externa de 20000mAh con puerto USB-C y carga rápida para dispositivos móviles.', imageUrl: 'https://cdn2.coolaccesorios.com/51198-thickbox_default/bateria-externa-universal-magnetica-power-bank-qi-5000-mah-cool-blanco.jpg', stock: 30 },
     { id: 29, name: 'Lámpara inteligente', price: 200000, description: 'Una lámpara inteligente regulable con control de voz, programación de horarios y ajuste de colores.', imageUrl: 'https://topesdegama.com/app/uploads-topesdegama.com/2021/02/lampara-inteligente-xiaomi-2.jpg', stock: 25 },
-    { id: 30, name: 'Termómetro digital', price: 50000, description: 'Un termómetro digital infrarrojo sin contacto para medir la temperatura corporal con precisión.', imageUrl: 'https://data.kleintools.com/sites/all/product_assets/hires/klein/ir1_photo.jpg', stock: 100 },
+    { id: 30, name: 'Termómetro digital', price: 50000, description: 'Un termómetro digital infrarrojo sin contacto para medir la temperatura corporal con precisión.', imageUrl: 'https://data.kleintools.com/sites/all/product_assets/hires/klein/ir1_photo.jpg',  stock: 100 },
   ];
 
 
