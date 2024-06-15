@@ -3,11 +3,11 @@
     <h1>Carrito de Compras</h1>
     <div class="card" *ngFor="let item of cartItems">
         <div class="card-body">
-            <h2>{{ item.product.name }}</h2>
-            <p>{{ item.product.price }}</p>
-            <p>Cantidad: {{ item.quantity }}</p>
-            <button class="btn btn-danger" (click)="removeFromCart(item.product.id)">Eliminar</button>
+            <h2>{{ item.product.nombre }}</h2>
+            <p>{{ item.product.precio }}</p>
+            <p>Cantidad: {{ item.cantidad }}</p>
+            <button class="btn btn-danger" (click)="funcionEliminar(item.product.id)">Eliminar</button>
         </div>
     </div>
-    <button class="btn btn-primary" (click)="checkout()">Proceder al Pago</button>
+    <button class="btn btn-primary" (click)="procederPago()">Proceder al Pago</button>
 </div>

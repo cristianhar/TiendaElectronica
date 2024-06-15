@@ -5,7 +5,7 @@ import { TiendaComponent } from './Components/tienda/tienda.component';
 import { CarritoComponent } from './Components/carrito/carrito.component';
 import { LoginComponent } from './Components/login/login.component';
 import { RegistroComponent } from './Components/registro/registro.component';
-import { CheckoutComponent } from './Components/checkout/checkout.component';
+
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -14,7 +14,6 @@ const routes: Routes = [
   { path: 'carrito', component: CarritoComponent },
   { path: 'login', component: LoginComponent },
   { path: 'registro', component: RegistroComponent },
-  { path: 'checkout', component: CheckoutComponent },
   { path: '**', component: HomeComponent }
 ];
 

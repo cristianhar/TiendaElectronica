@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
@@ -9,9 +9,8 @@ import { CarritoComponent } from './Components/carrito/carrito.component';
 import { LoginComponent } from './Components/login/login.component';
 import { RegistroComponent } from './Components/registro/registro.component';
 import { ProductSearchComponent } from './Components/product-search/product-search.component';
-import { CheckoutComponent } from './Components/checkout/checkout.component';
-import { FormsModule, NgForm } from '@angular/forms';
-
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,16 +20,13 @@ import { FormsModule, NgForm } from '@angular/forms';
     CarritoComponent,
     LoginComponent,
     RegistroComponent,
-    ProductSearchComponent,
-    CheckoutComponent
+    ProductSearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
-  ],
-  providers: [
-    provideClientHydration()
+    FormsModule,
+    HttpClientModule
   ],
   bootstrap: [AppComponent]
 })

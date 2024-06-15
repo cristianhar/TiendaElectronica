@@ -11,13 +11,19 @@ export class LoginComponent {
   username = '';
   password = '';
 
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(private serviciodeautenticacion: AuthService, private router: Router) { }
 
-  login(): void {
-    if (this.authService.login(this.username, this.password)) {
-      this.router.navigate(['/home']);
-    } else {
-      alert('Login fallido');
-    }
+  logearse(): void {
+    this.serviciodeautenticacion.validarlogeo(this.username, this.password).subscribe(success => {
+      if (success) {
+        this.router.navigate(['/home']);
+      } else {
+        alert('Login fallido');
+      }
+    });
+  }
+
+  formularioRegistro(): void {
+    this.router.navigate(['/registro']);
   }
 }

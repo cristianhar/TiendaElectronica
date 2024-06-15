@@ -10,13 +10,13 @@ import { Product } from '../../models/product.model';
   styleUrls: ['./product-search.component.css']
 })
 export class ProductSearchComponent {
-  searchTerm: string = '';
+  texto: string = '';
   @Output() searchResults = new EventEmitter<Product[]>();
 
-  constructor(private productService: ProductService) { }
+  constructor(private servicioDeProductos: ProductService) { }
 
-  onSearch(): void {
-    const results = this.productService.searchProducts(this.searchTerm);
+  funcionBuscar(): void {
+    const results = this.servicioDeProductos.buscarProducto(this.texto);
     this.searchResults.emit(results);
   }
 }
