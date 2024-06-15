@@ -1,0 +1,465 @@
+#App {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #111;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: min-content;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header #nav1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  height: 40px;
+  z-index: 90;
+}
+
+header #nav2 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  top: 0;
+  background-color: #111;
+  z-index: 100;
+}
+
+#nav1 div,
+#nav2 div {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  color: white;
+}
+
+#nav2 h4{
+  font-size: 30px;
+}
+
+#listado {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+#listado2 {
+  width: 250px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.deg{
+  color: #aaa;
+}
+
+#listado li,
+#listado2 li,
+#links {
+  list-style: none;
+  width: min-content;
+}
+
+li>a {
+  color: white;
+  text-decoration: none;
+}
+li>a>i {
+  font-size: 18px;
+}
+li>a:hover{
+  color: #aaa;
+}
+li>a i:hover {
+  color: #aaa;
+}
+
+#listado2 button{
+  color: #fff;
+  background-color: #06f;
+  border-radius: 20px;
+  padding: 0 10px;
+}
+#listado2 button:hover{
+  background-color: #37f;
+}
+
+/* imagen */
+#img1{
+  box-sizing: border-box;
+  width: 100%;
+  height: 94vh;
+  background-color: #000;
+  border-bottom: 40px solid #111;
+  border-left: 30px solid #111;
+  border-right: 30px solid #111;
+  background-image: url("/Recreacion_iPhone/img/p_pieR.png");
+  background-size: 50%;
+  background-position: 50% -25%;
+  background-repeat: no-repeat;
+  z-index: 80;
+}
+
+/* Cuadro */
+#cuadroX2{ 
+  box-sizing: border-box;
+  position: fixed;
+  background-color: #111;
+  top: 50px;
+  width: 100%;
+  height: min-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 40px solid #111;
+  border-left: 30px solid #111;
+  border-right: 30px solid #111;
+  z-index: 60;
+}
+
+#introContent{
+  width: 100%;
+  height: 94vh;
+  padding: 40px 0;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#introContent h2{
+  width: 60%;
+  font-size: 90px;
+  color: #fff;
+  text-align: center;
+  line-height: 80px;
+  margin-bottom: 20px;
+}
+#introContent p {
+  width: 60%;
+  font-size: 30px;
+  color: #aaa;
+  text-align: center;
+  font-weight: 600;
+  line-height: 35px;
+}
+#introContent p:nth-child(3){
+  font-size: 25px;
+}
+#links{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#links a{
+  font-size: 25px;
+  margin: 0 20px;
+  font-weight: 500;
+}
+#links a:hover {
+  text-decoration:underline;
+}
+
+#imgContent{
+  margin-top: 40px;
+  width: 100%;
+  height: 94vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 32%);
+  justify-content: space-between;
+  align-items: center;
+}
+#imgContent div{
+  width: 100%;
+  min-width: 200px;
+  height: 100%;
+  background-color: #000;
+}
+#imgContent div:nth-child(1){
+  background-image: url("/Recreacion_iPhone/img/p_pieR.png");
+  background-repeat: no-repeat;
+  background-size: 150%;
+  background-position: -40% -10%;
+  justify-self: start;
+}
+#imgContent div:nth-child(2) {
+  background-image: url("/Recreacion_iPhone/img/p_pieR.png");
+  background-repeat: no-repeat;
+  background-size: 140%;
+  background-position: -40% 5%;
+  background-attachment: fixed;
+  justify-self: center;
+}
+#imgContent div:nth-child(3) {
+  background-image: url("/Recreacion_iPhone/img/p_pieR.png");
+  background-repeat: no-repeat;
+  background-size: 55%;
+  background-position: 50% 50%;
+  justify-self: end;
+}
+
+/* take */
+#takeContent{
+  box-sizing: border-box;
+  position: fixed;
+  top: 40px;
+  width: 100%;
+  height: min-content;
+  display: grid;
+  grid-template-columns: 43% 57%;
+  justify-content: space-between;
+  background-color: #111;  
+  border-bottom: 40px solid #111;
+  border-left: 30px solid #111;
+  border-right: 30px solid #111;
+  z-index: 40;
+}
+
+#takeT {
+  width: 98%;
+  height: 94vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+}
+#takeT h2 {
+  width: 60%;
+  font-size: 70px;
+  color: #fff;
+  line-height: 70px;
+  margin-bottom: 20px;
+}
+#takeT p {
+  width: 60%;
+  font-size: 25px;
+  color: #aaa;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+#takeI{
+  justify-self: end;
+  width: 98%;
+  background: url("/Recreacion_iPhone/img/p_persp.jpg");background-color: #000;
+  background-repeat: no-repeat;
+  background-size: 175% ;
+  background-position: 50% 100%;
+}
+
+/* camara */
+
+#camara{
+  box-sizing: border-box;
+  top: 40px;
+  position: fixed;
+  width: 100%;
+  height: 94vh;
+  background-color: #000;
+}
+
+#camara div:nth-child(1){
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: 45%;
+  background-image: url("/Recreacion_iPhone/img/circulo2.jpg");
+  background-position: 100% 250%;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+#camara div:nth-child(2) {
+  position: absolute;
+  top: -420px;
+  width: 100%;
+  height: 100%;
+  background-size: 45%;
+  background-image: url("/Recreacion_iPhone/img/circulo2.jpg");
+  background-position: 10% -150%;
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+#camara div:nth-child(3) {
+  position: absolute;
+  top: 400px;
+  width: 100%;
+  height: 100%;
+  background-size: 45%;
+  background-image: url("/Recreacion_iPhone/img/circulo2.jpg");
+  background-position: 15% 50%;
+  background-repeat: no-repeat;
+  z-index: 3;
+}
+#camara div:nth-child(4){
+  position: absolute;
+  top: 100px;
+  left: 300px;
+  width: 490px;
+  z-index: 4;
+}
+#camara div h2, #camara div h2 span{
+  font-size: 85px;
+  font-weight: 600;
+  color: #aaa;
+}
+#camara div h2 span{
+  color: #fff;
+}
+
+/* Desc */
+
+#desc {
+  box-sizing: border-box;
+  width: 100%;
+  height: 110vh;
+  margin-top: 100vh;
+  border-top: 40px solid #111;
+  background-image: url("/Recreacion_iPhone/img/p_white.jpg");
+  background-color: #000;
+  /* background-position: 220% 250%; */
+  background-position: 220% 2500%;
+  background-size: 75%;
+  background-repeat: no-repeat;
+  z-index: 40;
+}
+#desc p{
+  margin-top: 200px;
+  margin-left: 280px;
+  width: 470px;
+  color: #fff;
+  font-size: 30px;
+  line-height: 33px;
+  font-weight: 600;
+}
+
+/* paisaje */
+#paisaje{
+  box-sizing: border-box;
+  width: 100%;
+  height: min-content;
+  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #000;
+  z-index: 60;
+}
+#paisaje>p{
+  margin-top: 90px;
+  width: 65%;
+  font-size: 25px;
+  color: #aaa;
+}
+#paisaje>p span{
+  color: #fff;
+}
+
+#paisaje #ima{
+  width: 700px;
+  height: min-content;
+  margin-top: 60px;
+}
+#paisaje #ima img{
+  width: 100%;
+}
+
+#paisaje #nlv {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0 10px 0;
+}
+#paisaje #nlv p{
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+}
+
+#paisaje #des{
+  width: 300px;
+  height: 5px;
+  background-color: #aaa;
+}
+#paisaje #des div{
+  width: 100px;
+  height: 100%;
+  background-color: #fff;
+}
+#gracias {
+  box-sizing: border-box;
+  width: 100%;
+  height: min-content;
+  padding: 70px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  z-index: 60;
+}
+#gracias h3{
+  margin: 10px;
+  font-size: 40px;
+}
+#gracias #ima{
+  width: 500px;
+}
+#gracias #ima img{
+  margin: 40px 0;
+  width: 100%;
+  box-shadow: 5px 5px 45px #0005, -5px 5px 45px #0005, 5px -5px 45px #0005, -5px -5px 45px #0005;
+}
+#gracias #ima img:hover{
+  box-shadow: 0 0 0 #fff0, 0 0 0 #fff0, 0 0 0 #fff0, 0 0 0 #fff0;
+}
+#gracias h2 {
+  margin: 30px;
+  font-size: 60px;
+}
+#gracias #ima2 {
+  width: 400px;
+  margin: 20px 0;
+}
+#gracias #ima2 img {
+  width: 100%;
+}
+#gracias #link{
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+#gracias #link a{
+  font-size: 25px;
+  color: #000;
+}
