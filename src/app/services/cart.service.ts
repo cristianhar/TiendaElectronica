@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 interface CartItem {
   productId: number;
-  quantity: number;
+  cantidad: number;
 }
 
 @Injectable({
@@ -13,24 +13,24 @@ export class CartService {
 
   constructor() { }
 
-  addToCart(productId: number, quantity: number): void {
+  agregarACarrito(productId: number, cantidad: number): void {
     const item = this.cart.find(i => i.productId === productId);
     if (item) {
-      item.quantity += quantity;
+      item.cantidad += cantidad;
     } else {
-      this.cart.push({ productId, quantity });
+      this.cart.push({ productId, cantidad });
     }
   }
 
-  getCart(): CartItem[] {
+  obtenerCarritoDeCompras(): CartItem[] {
     return this.cart;
   }
 
-  removeFromCart(productId: number): void {
+  eliminarObjetoCarro(productId: number): void {
     this.cart = this.cart.filter(item => item.productId !== productId);
   }
 
-  clearCart(): void {
+  limpiarCarrito(): void {
     this.cart = [];
   }
 }

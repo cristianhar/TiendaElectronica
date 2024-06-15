@@ -1,18 +1,26 @@
 <div class="container">
-    <h1>Tienda</h1>
-    <app-product-search (searchResults)="onSearchResults($event)"></app-product-search>
-    <div class="row">
-        <div class="col-md-4" *ngFor="let product of filteredProducts">
-            <div class="card mt-4">
-                <div class="card-body ">
-                    <h2 class="card-title">{{ product.name }}</h2>
-                    <img [src]="product.imageUrl" class="card-img-top"  style="width: 300px;">
-                    <p class="card-text">{{ product.description }}</p>
-                    <p class="card-text">{{ product.price }}</p>
-                    <p class="card-text">Stock: {{ product.stock }}</p>
-                    <button class="btn btn-primary" (click)="addToCart(product)">Agregar al Carrito</button>
-                </div>
-            </div> 
+  <h1>Tienda</h1>
+  <app-product-search
+    (searchResults)="funcionBuscarProducto($event)"
+  ></app-product-search>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let product of filtrarProductos">
+      <div class="card mt-4">
+        <div class="card-body">
+          <h2 class="card-title">{{ product.nombre }}</h2>
+          <img
+            [src]="product.imageUrl"
+            class="card-img-top"
+            style="width: 300px"
+          />
+          <p class="card-text">{{ product.descripcion }}</p>
+          <p class="card-text">{{ product.precio }}</p>
+          <p class="card-text">Stock: {{ product.stock }}</p>
+          <button class="btn btn-primary" (click)="funcionAgregarCarrito(product)">
+            Agregar al Carrito
+          </button>
         </div>
+      </div>
     </div>
+  </div>
 </div>

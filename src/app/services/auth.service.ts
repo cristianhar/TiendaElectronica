@@ -1,29 +1,53 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  private isAuthenticated = false;
 
-  constructor() { }
+  private EstaAutenticado = false;
+  private username: string | null = null;
 
-  login(username: string, password: string): boolean {
-    // Implementa la lógica de autenticación aquí
-    this.isAuthenticated = true;
-    return this.isAuthenticated;
+  // URL base de la API
+  private apiUrl = 'http://localhost/apiv2/';
+
+  constructor(private http: HttpClient) { }
+
+  validarlogeo(username: string, password: string): Observable<boolean> {
+    return this.http.post<any>(this.apiUrl + 'login.php', { username, password }).pipe(
+      map(response => {
+        if (response.success) {
+          this.EstaAutenticado = true;
+          this.username = response.username;
+          return true;
+        } else {
+          this.EstaAutenticado = false;
+          this.username = null;
+          return false;
+        }
+      })
+    );
   }
 
-  logout(): void {
-    this.isAuthenticated = false;
+  deslogear(): void {
+    this.EstaAutenticado = false;
+    this.username = null;
   }
 
-  register(username: string, password: string): boolean {
-  
-    return true;
+  registrobd(user: any): Observable<boolean> {
+    return this.http.post<any>(this.apiUrl + 'register.php', user).pipe(
+      map(response => response.success)
+    );
   }
 
-  isLoggedIn(): boolean {
-    return this.isAuthenticated;
+  validarLogeonav(): boolean {
+    return this.EstaAutenticado;
+  }
+
+  obtenerUsuariobd(): string | null {
+    return this.username;
   }
 }
