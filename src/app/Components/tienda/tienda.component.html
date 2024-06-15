@@ -4,19 +4,45 @@
     (searchResults)="funcionBuscarProducto($event)"
   ></app-product-search>
   <div class="row">
-    <div class="col-md-4" *ngFor="let product of filtrarProductos">
-      <div class="card mt-4">
+    <div
+      class="col-md-4 d-flex align-items-stretch"
+      *ngFor="let product of filtrarProductos"
+    >
+      <div class="card mt-4 w-100">
         <div class="card-body">
           <h2 class="card-title">{{ product.nombre }}</h2>
           <img
             [src]="product.imageUrl"
             class="card-img-top"
-            style="width: 300px"
+            alt="Producto"
+            style="height: 200px; object-fit: cover"
           />
           <p class="card-text">{{ product.descripcion }}</p>
           <p class="card-text">{{ product.precio }}</p>
-          <p class="card-text">Stock: {{ product.stock }}</p>
-          <button class="btn btn-primary" (click)="funcionAgregarCarrito(product)">
+          <p class="card-text" [class.agotado]="product.stock === 1">
+            Stock: {{ product.stock }}
+            <span *ngIf="product.stock === 0" class="agotado-text"
+              >AGOTADO</span
+            >
+          </p>
+          <div class="form-group" *ngIf="product.stock !== 0">
+            <label for="cantidad{{ product.id }}">Cantidad:</label>
+            <input
+              type="number"
+              id="cantidad{{ product.id }}"
+              [(ngModel)]="product.cantidadToAdd"
+              min="1"
+              class="form-control"
+            />
+          </div>
+          <button
+            class="btn btn-primary"
+            (click)="
+              funcionAgregarCarrito(product, product.cantidadToAdd ?? 0);
+              product.cantidadToAdd = 1
+            "
+            [disabled]="product.stock === 0"
+          >
             Agregar al Carrito
           </button>
         </div>

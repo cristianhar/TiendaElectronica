@@ -17,16 +17,20 @@ export class TiendaComponent implements OnInit {
   ngOnInit(): void {
     this.productos = this.productService.traerProductos();
     this.filtrarProductos = this.productos;
+
+    // Inicializar cantidadToAdd para cada producto
+    this.filtrarProductos.forEach(product => {
+      product.cantidadToAdd = 1; // Valor predeterminado de cantidad a agregar
+    });
   }
 
   funcionBuscarProducto(results: Product[]): void {
     this.filtrarProductos = results;
   }
 
-  funcionAgregarCarrito(product: Product): void {
-    if (product.stock > 0) {
-      this.cartService.agregarACarrito(product.id, 1);
-      this.productService.actualizarStock(product.id, 1); // Aquí corregimos para restar 1 al stock
+  funcionAgregarCarrito(product: Product, cantidad: number): void {
+    if (product.stock >= cantidad) {
+      this.cartService.agregarACarrito(product.id, cantidad);
       alert('Producto agregado al carrito');
     } else {
       alert('No hay suficiente stock disponible');
