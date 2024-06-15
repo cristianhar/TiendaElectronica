@@ -11,7 +11,7 @@ import { CartItem } from '../../models/cart.item';
 })
 export class CarritoComponent implements OnInit {
 
-  cartItems: CartItem[] = [];
+  carroProductos: CartItem[] = [];
 
   constructor(private cartService: CartService, private productService: ProductService) { }
 
@@ -21,7 +21,7 @@ export class CarritoComponent implements OnInit {
 
   cargarCarro(): void {
     const cart = this.cartService.obtenerCarritoDeCompras();
-    this.cartItems = cart.map(item => {
+    this.carroProductos = cart.map(item => {
       const product = this.productService.getProductById(item.productId);
       if (product) {
         return { product, cantidad: item.cantidad };
@@ -32,16 +32,22 @@ export class CarritoComponent implements OnInit {
   }
 
   funcionEliminar(productId: number): void {
-    const itemIndex = this.cartItems.findIndex(cartItem => cartItem.product.id === productId);
+    const itemIndex = this.carroProductos.findIndex(cartItem => cartItem.product.id === productId);
     if (itemIndex !== -1) {
-      const item = this.cartItems[itemIndex];
-      this.productService.actualizarStock(productId, item.cantidad); // Restaurar el stock del producto eliminado
-      this.cartItems.splice(itemIndex, 1);
+      this.carroProductos.splice(itemIndex, 1);
+      this.cartService.eliminarObjetoCarro(productId);
     }
-    this.cartService.eliminarObjetoCarro(productId);
   }
 
   procederPago(): void {
+    if (this.carroProductos.length === 0) {
+      alert('No hay nada en el carrito para proceder al pago.');
+      return;
+    }
+
+    this.carroProductos.forEach(item => {
+      this.productService.actualizarStock(item.product.id, item.cantidad); // Restaurar el stock de cada producto en el carrito
+    });
     alert('Pago realizado con éxito');
     this.cartService.limpiarCarrito();
     this.cargarCarro(); // Recargar los productos en el carrito
