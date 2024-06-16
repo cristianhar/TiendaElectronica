@@ -22,7 +22,7 @@ export class AuthService {
         if (response.success) {
           this.EstaAutenticado = true;
           this.username = response.username;
-          return true;
+          return true; 
         } else {
           this.EstaAutenticado = false;
           this.username = null;

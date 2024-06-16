@@ -1,2 +1,23 @@
-<h1>Bienvenido a la Tienda</h1>
-<p>Explora nuestros productos y disfruta de la experiencia de compra.</p>
+<div id="cuadroX2">
+    <div id="introContent">
+        <h2>¡Bienvenidos a la mejor tienda virtual!</h2>
+        <p>Estamos encantados de tenerte aquí. En nuestra tienda virtual, encontrarás las últimas novedades en tecnología y productos electrónicos de la más alta calidad.</p>
+        <p>Explora una amplia gama de dispositivos innovadores que transformarán tu vida diaria. Desde smartphones de última generación hasta accesorios imprescindibles, todo lo que necesitas está a solo un clic de distancia.</p>
+        <p>¡Prepárate para descubrir una nueva experiencia de compra con ofertas exclusivas y un servicio al cliente excepcional!</p>
+    </div>
+
+    <div class="padre">
+    
+        <button (click)=" decrementar()">
+            <p>👈</p>
+        </button>
+    
+        <div class="cualquiera">
+            <span><img class="img" [src]="imagenes" alt=""></span>
+        </div>
+    
+        <button (click)="incrementar()">
+            <p>👉</p>
+        </button>
+    
+    </div>
