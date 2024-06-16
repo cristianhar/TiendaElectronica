@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #fff;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header #nav1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    height: 40px;
+    z-index: 90;
+}
+
+header #nav2 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    top: 0;
+    background-color: #111;
+    z-index: 100;
+    position: static;
+}
+
+#nav1 div,
+#nav2 div {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    color: white;
+}
+
+#nav2 h4 {
+    font-size: 30px;
+}
+
+#listado {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+#listado li,
+#listado2 li,
+#links {
+    list-style: none;
+    width: min-content;
+}
+
+li>a {
+    color: white;
+    text-decoration: none;
+}
+
+li>a:hover {
+    color: #aaa;
+}
+
+#img1 {
+    box-sizing: border-box;
+    width: 100%;
+    height: 94vh;
+    background-color: #000;
+    border-bottom: 40px solid #111;
+    border-left: 30px solid #111;
+    border-right: 30px solid #111;
+    background-image: url("/Recreacion_iPhone/img/p_pieR.png");
+    background-size: 50%;
+    background-position: 50% -25%;
+    background-repeat: no-repeat;
+    z-index: 80;
+}
+
+#cuadroX2 {
+    box-sizing: border-box;
+    position: static;
+    background-color: #111;
+    top: 50px;
+    width: 100%;
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 40px solid #111;
+    border-left: 30px solid #111;
+    border-right: 30px solid #111;
+    z-index: 60;
+}
+
+#introContent {
+    width: 100%;
+    height: 94vh;
+    padding: 40px 0;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#introContent h2 {
+    width: 60%;
+    font-size: 90px;
+    color: #fff;
+    text-align: center;
+    line-height: 80px;
+    margin-bottom: 20px;
+}
+
+#introContent p {
+    width: 60%;
+    font-size: 30px;
+    color: #aaa;
+    text-align: center;
+    font-weight: 600;
+    line-height: 35px;
+}
+
+#introContent p:nth-child(3) {
+    font-size: 25px;
+}
+
+#imgContent {
+    margin-top: 40px;
+    width: 100%;
+    height: 94vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 32%);
+    justify-content: space-between;
+    align-items: center;
+}
+
+#imgContent img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Estilos del carrusel */
+.carousel {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin: 40px auto;
+}
+
+.carousel-inner {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    width: 100%;
+    flex: 1 0 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    display: block;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-controls button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.carousel-controls button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.padre{
+    display: flex;
+    justify-content: space-evenly;
+}
+.padre button{
+    margin: auto;
+}
+
+.cualquiera{
+    width: 100%;
+    height: 500px;
+    display: grid;
+    place-items: center;
+}
+.cualquiera span img{
+    width: 800px;
+    height: 500px;
+}
