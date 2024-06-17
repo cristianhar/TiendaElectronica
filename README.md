@@ -1,27 +1,54 @@
-# TiendaElectronica
+# Tienda Electrónica
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.5.
+Bienvenido a la Tienda Electrónica, un proyecto de comercio electrónico desarrollado con Angular para el frontend y PHP para el backend.
 
-## Development server
+## Descripción del Proyecto
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+La Tienda Electrónica es una aplicación web diseñada para permitir a los usuarios comprar productos electrónicos en línea. El proyecto consta de un frontend desarrollado con Angular que proporciona una interfaz de usuario intuitiva y receptiva, y un backend desarrollado con PHP que maneja las operaciones de la base de datos y la lógica de negocio.
 
-## Code scaffolding
+## Características Principales
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Visualización de productos disponibles para comprar.
+- Agregar productos al carrito de compras.
+- Gestión del carrito de compras.
+- Proceso de pago simulado.
+- Registro de usuarios nuevos.
+- Autenticación de usuarios existentes.
+- Y más.
 
-## Build
+## Requisitos Previos
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Para ejecutar la aplicación en un entorno local, necesitarás tener instalados los siguientes componentes:
 
-## Running unit tests
+- Node.js
+- Angular CLI
+- PHP
+- MySQL (o cualquier otro sistema de gestión de bases de datos compatible)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Instalación
 
-## Running end-to-end tests
+1. Clona este repositorio en tu máquina local:
+git clone https://github.com/tuusuario/tienda-electronica.git
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+2. Configura el backend:
 
-## Further help
+   - Configura la conexión a la base de datos en el archivo `apiv2/config.php`.
+   - Importa el archivo `database.sql` en tu sistema de gestión de bases de datos para crear la estructura de la base de datos y   
+    poblarla con datos de ejemplo.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+3. Inicia el servidor del frontend:
+   -ng serve --o
+
+## Contribución
+
+Si quieres contribuir a este proyecto, sigue estos pasos:
+
+1. Haz un fork del proyecto.
+2. Crea una nueva rama (`git checkout -b feature/nueva-funcionalidad`).
+3. Haz tus cambios y realiza un commit (`git commit -am 'Añadir nueva funcionalidad'`).
+4. Haz push a la rama (`git push origin feature/nueva-funcionalidad`).
+5. Crea un nuevo Pull Request.
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
