@@ -21,7 +21,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     CarritoComponent,
     LoginComponent,
     RegistroComponent,
-    ProductSearchComponent
+    ProductSearchComponent,
+   
   ],
   imports: [
     BrowserModule,
