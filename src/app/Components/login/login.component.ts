@@ -33,18 +33,18 @@ export class LoginComponent {
     this.router.navigate(['/registro']);
   }
 
-  // Función para abrir el modal de inicio de sesión exitoso
+
   mostrarModalLoginExitoso(): void {
     this.modalService.open(ModalLoginExitoso);
   }
 
-  // Función para abrir el modal de inicio de sesión fallido
+  
   mostrarModalLoginFallido(): void {
     this.modalService.open(ModalLoginFallido);
   }
 }
 
-// Componente modal para el inicio de sesión exitoso
+
 @Component({
   template: `
     <div class="modal-body">
@@ -54,7 +54,7 @@ export class LoginComponent {
 })
 export class ModalLoginExitoso { }
 
-// Componente modal para el inicio de sesión fallido
+
 @Component({
   template: `
     <div class="modal-body">
