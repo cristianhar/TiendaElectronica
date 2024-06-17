@@ -3,7 +3,7 @@
   padding: 20px;
   color: #fff;
   background-image: linear-gradient(to right, rgba(17, 17, 17, 0), #ad9999, rgba(17, 17, 17, 0));
-  height: 100vh; /* Ajustar la altura al 100% de la altura de la ventana */
+ min-height: 100vh; /* Ajustar la altura al 100% de la altura de la ventana */ /* Ajustar la altura al 100% de la altura de la ventana */
 }
   
   /* Estilo para el título "Carrito de Compras" */
