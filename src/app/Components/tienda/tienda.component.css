@@ -1,23 +1,31 @@
 .todo {
   background-color: #1f1717; /* Color gris de fondo */
-  background-image: linear-gradient(to left, rgba(245, 245, 245, 0), #817575 50%, rgba(250, 250, 250, 0.014)); /* Difuminación en el lado izquierdo */
+  background-image: linear-gradient(
+    to left,
+    rgba(245, 245, 245, 0),
+    #817575 50%,
+    rgba(250, 250, 250, 0.014)
+  ); /* Difuminación en el lado izquierdo */
 }
-
 
 /* Estilo para el contenedor principal */
 .container {
   padding: 20px;
   color: #fff; /* Texto blanco para contraste */
-  background-image: linear-gradient(to right, rgba(17, 17, 17, 0), #ad9999, rgba(17, 17, 17, 0));
+  background-image: linear-gradient(
+    to right,
+    rgba(17, 17, 17, 0),
+    #ad9999,
+    rgba(17, 17, 17, 0)
+  );
 }
-
 
 /* Estilo para el título "Tienda" */
 h1 {
   text-align: center;
   margin-bottom: 40px;
   color: #fff; /* Texto blanco para contraste */
-  font-family: 'Graffiti', cursive; /* Fuente estilo graffiti */
+  font-family: "Graffiti", cursive; /* Fuente estilo graffiti */
 }
 
 /* Estilo para la caja de búsqueda */
@@ -100,12 +108,23 @@ app-product-search button {
     width: 100%;
   }
 }
-
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
 .agotado-text {
   color: red;
+  font-weight: bold;
+}
+
+.text-success {
+  color: #28a745 !important;
+}
+
+.fw-bold {
+  font-weight: bold !important;
 }
 app-product-search {
   display: block; /* Convertir el componente en un bloque */
   margin: 0 auto; /* Centrar horizontalmente */
 }
-

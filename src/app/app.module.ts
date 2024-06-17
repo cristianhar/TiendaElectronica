@@ -11,6 +11,7 @@ import { RegistroComponent } from './Components/registro/registro.component';
 import { ProductSearchComponent } from './Components/product-search/product-search.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   bootstrap: [AppComponent]
 })

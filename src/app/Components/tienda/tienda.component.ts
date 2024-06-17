@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 import { ProductService } from '../../services/product.service';
 import { CartService } from '../../services/cart.service';
 import { Product } from '../../models/product.model';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-tienda',
@@ -11,16 +12,17 @@ import { Product } from '../../models/product.model';
 export class TiendaComponent implements OnInit {
   productos: Product[] = [];
   filtrarProductos: Product[] = [];
+  selectedProduct: Product | null = null;
+  selectedQuantity: number = 1;
 
-  constructor(private productService: ProductService, private cartService: CartService) { }
+  constructor(private productService: ProductService, private cartService: CartService, private modalService: NgbModal) { }
 
   ngOnInit(): void {
     this.productos = this.productService.traerProductos();
     this.filtrarProductos = this.productos;
 
-    // Inicializar cantidadToAdd para cada producto
     this.filtrarProductos.forEach(product => {
-      product.cantidadToAdd = 1; // Valor predeterminado de cantidad a agregar
+      product.cantidadToAdd = 1;
     });
   }
 
@@ -28,12 +30,16 @@ export class TiendaComponent implements OnInit {
     this.filtrarProductos = results;
   }
 
-  funcionAgregarCarrito(product: Product, cantidad: number): void {
+  funcionAgregarCarrito(product: Product, cantidad: number, content: TemplateRef<any>, stockContent: TemplateRef<any>): void {
     if (product.stock >= cantidad) {
       this.cartService.agregarACarrito(product.id, cantidad);
-      alert('Producto agregado al carrito');
+      this.selectedProduct = product;
+      this.selectedQuantity = cantidad;
+      this.modalService.open(content);
+      product.cantidadToAdd = 1;
     } else {
-      alert('No hay suficiente stock disponible');
+      this.selectedProduct = product;
+      this.modalService.open(stockContent);
     }
   }
 }

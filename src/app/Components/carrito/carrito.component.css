@@ -80,4 +80,15 @@
     height: 200px; /* Altura de la imagen */
     border-radius: 50%; /* Bordess redondeados */
   }
-  
+  .modal-body {
+  text-align: center;
+}
+
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 1rem;
+}
+.text-success {
+  color: #28a745 !important;
+}
