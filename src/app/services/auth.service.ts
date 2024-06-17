@@ -11,7 +11,7 @@ export class AuthService {
   private EstaAutenticado = false;
   private username: string | null = null;
 
-  // URL base de la API
+
   private apiUrl = 'http://localhost/apiv2/';
 
   constructor(private http: HttpClient) { }

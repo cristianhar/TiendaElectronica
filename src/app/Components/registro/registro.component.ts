@@ -50,18 +50,18 @@ export class RegistroComponent {
     });
   }
 
-  // Función para abrir el modal de registro exitoso
+
   mostrarModalRegistroExitoso(): void {
     this.modalService.open(ModalRegistroExitoso);
   }
 
-  // Función para abrir el modal de usuario existente
+
   mostrarModalUsuarioExistente(): void {
     this.modalService.open(ModalUsuarioExistente);
   }
 }
 
-// Componente modal para el registro exitoso
+
 @Component({
   template: `
     <div class="modal-body">
@@ -71,7 +71,7 @@ export class RegistroComponent {
 })
 export class ModalRegistroExitoso { }
 
-// Componente modal para usuario existente
+
 @Component({
   template: `
     <div class="modal-body">
