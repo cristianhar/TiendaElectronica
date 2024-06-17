@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 import { CartService } from '../../services/cart.service';
 import { ProductService } from '../../services/product.service';
-import { Product } from '../../models/product.model';
 import { CartItem } from '../../models/cart.item';
+import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-carrito',
@@ -10,10 +10,15 @@ import { CartItem } from '../../models/cart.item';
   styleUrls: ['./carrito.component.css']
 })
 export class CarritoComponent implements OnInit {
-
   carroProductos: CartItem[] = [];
+  pagoProcesado: boolean = false;
+  modalRef: NgbModalRef | undefined;
 
-  constructor(private cartService: CartService, private productService: ProductService) { }
+  constructor(
+    private cartService: CartService,
+    private productService: ProductService,
+    private modalService: NgbModal
+  ) { }
 
   ngOnInit(): void {
     this.cargarCarro();
@@ -39,17 +44,25 @@ export class CarritoComponent implements OnInit {
     }
   }
 
-  procederPago(): void {
+  procederPago(content: TemplateRef<any>): void {
     if (this.carroProductos.length === 0) {
       alert('No hay nada en el carrito para proceder al pago.');
       return;
     }
 
-    this.carroProductos.forEach(item => {
-      this.productService.actualizarStock(item.product.id, item.cantidad); // Restaurar el stock de cada producto en el carrito
-    });
-    alert('Pago realizado con éxito');
-    this.cartService.limpiarCarrito();
-    this.cargarCarro(); // Recargar los productos en el carrito
+    this.pagoProcesado = false;
+    this.modalRef = this.modalService.open(content, { backdrop: 'static', keyboard: false });
+
+    setTimeout(() => {
+      this.carroProductos.forEach(item => {
+        this.productService.actualizarStock(item.product.id, item.cantidad);
+      });
+      this.pagoProcesado = true;
+      this.cartService.limpiarCarrito();
+      this.cargarCarro();
+      setTimeout(() => {
+        this.modalRef?.close();
+      }, 5000); // Cierra el modal después de mostrar el mensaje de pago procesado
+    }, 5000); // Simula el tiempo de procesamiento del pago
   }
 }
