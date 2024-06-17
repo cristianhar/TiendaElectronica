@@ -2,86 +2,95 @@
 .container {
   padding: 20px;
   color: #fff;
-  background-image: linear-gradient(to right, rgba(17, 17, 17, 0), #ad9999, rgba(17, 17, 17, 0));
- min-height: 100vh; /* Ajustar la altura al 100% de la altura de la ventana */ /* Ajustar la altura al 100% de la altura de la ventana */
+  background-image: linear-gradient(
+    to right,
+    rgba(17, 17, 17, 0),
+    #ad9999,
+    rgba(17, 17, 17, 0)
+  );
+  min-height: 100vh; /* Ajustar la altura al 100% de la altura de la ventana */ /* Ajustar la altura al 100% de la altura de la ventana */
 }
-  
-  /* Estilo para el título "Carrito de Compras" */
-  h1 {
-    text-align: center;
-    margin-bottom: 40px;
-    color: #fff; /* Texto blanco para contraste */
-    font-family: 'Graffiti', cursive; /* Fuente estilo graffiti */
-  }
-  
-  /* Estilo para las tarjetas de producto en el carrito */
-  .card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    transition: box-shadow 0.3s ease;
-    background-color: #222; /* Fondo oscuro */
-    color: #fff; /* Texto blanco para contraste */
-  }
-  
-  .card:hover {
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* Sombra con tonos claros */
-  }
-  
-  .card-body {
-    text-align: center;
-    padding: 15px;
-  }
-  
-  .card-title {
-    font-size: 1.5em;
-    color: #fff; /* Texto blanco para contraste */
-    margin-bottom: 10px;
-  }
-  
-  .card-img-top {
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 15px;
-    margin-bottom: 15px;
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .card-text {
-    color: #ccc; /* Texto gris claro para contraste */
-    margin-bottom: 10px;
-  }
-  
-  .btn {
-    background-color: #007bff;
-    border: none;
-    color: #fff; /* Texto blanco para contraste */
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btn:hover {
-    background-color: #0056b3;
-  }
-  
 
-  .todo {
-    background-color: #1f1717; /* Color gris de fondo */
-    background-image: linear-gradient(to left, rgba(245, 245, 245, 0), #817575 50%, rgba(250, 250, 250, 0.014)); /* Difuminación en el lado izquierdo */
-  }
+/* Estilo para el título "Carrito de Compras" */
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #fff; /* Texto blanco para contraste */
+  font-family: "Graffiti", cursive; /* Fuente estilo graffiti */
+}
 
-  .img {
-    display: block; /* Convertir la imagen en un bloque para aplicar márgenes automáticos */
-    margin: 0 auto; /* Centrar horizontalmente */
-    width: 400px; /* Ancho de la imagen */
-    height: 200px; /* Altura de la imagen */
-    border-radius: 50%; /* Bordess redondeados */
-  }
-  .modal-body {
+/* Estilo para las tarjetas de producto en el carrito */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+  background-color: #222; /* Fondo oscuro */
+  color: #fff; /* Texto blanco para contraste */
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* Sombra con tonos claros */
+}
+
+.card-body {
+  text-align: center;
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 1.5em;
+  color: #fff; /* Texto blanco para contraste */
+  margin-bottom: 10px;
+}
+
+.card-img-top {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  max-width: 100%;
+  height: auto;
+}
+
+.card-text {
+  color: #ccc; /* Texto gris claro para contraste */
+  margin-bottom: 10px;
+}
+
+.btn {
+  background-color: #007bff;
+  border: none;
+  color: #fff; /* Texto blanco para contraste */
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.todo {
+  background-color: #1f1717; /* Color gris de fondo */
+  background-image: linear-gradient(
+    to left,
+    rgba(245, 245, 245, 0),
+    #817575 50%,
+    rgba(250, 250, 250, 0.014)
+  ); /* Difuminación en el lado izquierdo */
+}
+
+.img {
+  display: block; /* Convertir la imagen en un bloque para aplicar márgenes automáticos */
+  margin: 0 auto; /* Centrar horizontalmente */
+  width: 400px; /* Ancho de la imagen */
+  height: 200px; /* Altura de la imagen */
+  border-radius: 50%; /* Bordess redondeados */
+}
+.modal-body {
   text-align: center;
 }
 
@@ -91,5 +100,20 @@
   margin-bottom: 1rem;
 }
 .text-success {
-  color: #28a745 !important;
+  color: black !important;
+}
+
+.no-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; /* Ajusta la altura según tu preferencia */
+}
+
+.no-items p {
+  font-size: 18px;
+  color: #555; /* Color de texto gris */
+  border: 2px solid #ddd; /* Borde gris */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
 }
