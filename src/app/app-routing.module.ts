@@ -9,7 +9,7 @@ import { RegistroComponent } from './Components/registro/registro.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'home', component: HomeComponent },
+  { path: 'inicio', component: HomeComponent },
   { path: 'tienda', component: TiendaComponent },
   { path: 'carrito', component: CarritoComponent },
   { path: 'login', component: LoginComponent },

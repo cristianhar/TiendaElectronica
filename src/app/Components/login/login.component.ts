@@ -21,7 +21,7 @@ export class LoginComponent {
   logearse(): void {
     this.authService.validarlogeo(this.username, this.password).subscribe(success => {
       if (success) {
-        this.router.navigate(['/home']);
+        this.router.navigate(['/inicio']);
         this.mostrarModalLoginExitoso();
       } else {
         this.mostrarModalLoginFallido();
