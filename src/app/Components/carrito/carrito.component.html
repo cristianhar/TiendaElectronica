@@ -1,38 +1,24 @@
-<body class="todo">
+<div class="todo">
   <div class="container">
     <h1>Carrito de Compras</h1>
-    <div class="row">
-      <div
-        class="col-md-4 d-flex align-items-stretch"
-        *ngFor="let item of carroProductos"
-      >
-        <div class="card mb-4 w-100">
-          <img
-            [src]="item.product.imageUrl"
-            class="card-img-top"
-            alt="..."
-            style="height: 200px; object-fit: cover"
-          />
-          <div class="card-body">
-            <h5 class="card-title">{{ item.product.nombre }}</h5>
-            <p class="card-text">Precio unitario: {{ item.product.precio }}</p>
-            <p class="card-text">Cantidad: {{ item.cantidad }}</p>
-            <p class="card-text">
-              Total: {{ item.product.precio * item.cantidad }}
-            </p>
-            <button
-              class="btn btn-danger"
-              (click)="funcionEliminar(item.product.id)"
-            >
-              Eliminar
-            </button>
-          </div>
-        </div>
+    
+    <!-- Verificar si el carrito está vacío -->
+    <ng-container *ngIf="carroProductos.length === 0">
+      <div class="no-items">
+        <p>No tienes productos añadidos actualmente.</p>
       </div>
+    </ng-container>
+
+    <!-- Renderizar los elementos del carrito si hay productos -->
+    <div class="row" *ngIf="carroProductos.length > 0">
+      <ng-container *ngTemplateOutlet="itemsInCart"></ng-container>
     </div>
-    <button class="btn btn-primary" (click)="procederPago(content)">
+
+    <!-- Mostrar el botón "Procesar Pago" solo si hay items en el carrito -->
+    <button *ngIf="carroProductos.length > 0" class="btn btn-primary" (click)="procederPago(content)">
       Proceder al Pago
     </button>
+    
     <p *ngIf="pagoProcesado" class="text-success mt-3">
       Las credenciales de pago han sido enviadas a tu correo electrónico.
 
@@ -59,4 +45,20 @@
       </div>
     </div>
   </ng-template>
-</body>
+
+  <!-- Template para los elementos del carrito -->
+  <ng-template #itemsInCart>
+    <div class="col-md-4 d-flex align-items-stretch" *ngFor="let item of carroProductos">
+      <div class="card mb-4 w-100">
+        <img [src]="item.product.imageUrl" class="card-img-top" alt="..." style="height: 200px; object-fit: cover" />
+        <div class="card-body">
+          <h5 class="card-title">{{ item.product.nombre }}</h5>
+          <p class="card-text">Precio unitario: {{ item.product.precio }}</p>
+          <p class="card-text">Cantidad: {{ item.cantidad }}</p>
+          <p class="card-text">Total: {{ item.product.precio * item.cantidad }}</p>
+          <button class="btn btn-danger" (click)="funcionEliminar(item.product.id)">Eliminar</button>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</div>
