@@ -76,7 +76,7 @@ export class ModalRegistroExitoso { }
 @Component({
   template: `
     <div class="modal-body">
-      <p>El usuario ya existe. Por favor, intenta con otro nombre de usuario.</p>
+      <p style="color: black;">El usuario ya existe. Por favor, intenta con otro nombre de usuario.</p>
     </div>
   `
 })

@@ -58,7 +58,7 @@ export class ModalLoginExitoso { }
 @Component({
   template: `
     <div class="modal-body">
-      <p>Inicio de sesión fallido. Verifica tus credenciales e intenta nuevamente.</p>
+      <p style="color: black;">Inicio de sesión fallido. Verifica tus credenciales e intenta nuevamente.</p>
     </div>
   `
 })
