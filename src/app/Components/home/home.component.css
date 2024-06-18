@@ -10,37 +10,37 @@ body {
 	margin: 0 auto;
 	padding: 0;
 	font-size: 16px;
-	background: @main-color;
+	background: main-color;
 	section {display: block;} 
 	h1, h2, h3, h4, h5, h6, ul, li {
 		margin: 0;
 		padding: 0;
 	}
 	h1 {
-		font-family: @main-font;
+		font-family: main-font;
 		font-weight: 700;
 		text-transform: uppercase;
 	}
 	h2 {
-		font-family: @main-font;
+		font-family: main-font;
 		font-size: 1.875em;
 		font-weight: 700;
 		text-transform: uppercase;
 	}
 	h3 {
-		font-family: @h3-font;
+		font-family: h3-font;
 		font-size: 1.5em;
 		font-weight: 400;
 	}
 	h4 {
-		font-family: @main-font;
+		font-family: main-font;
 		font-size: 0.875em;
 		font-weight: 400;
 		text-transform: uppercase;
 	}
 	p {
 		line-height: 150%;
-		font-family: @content-font;
+		font-family: content-font;
 		font-size: 0.9375em;
 		color: #999;
 	}
@@ -72,8 +72,8 @@ body {
 	top: 0;
 	width: 100%;
 	z-index: 1000;
-	font-family: @main-font;
-	color: @main-color;
+	font-family: main-font;
+	color: main-color;
 	background: transparent;
 	.header-wrapper {
 		display: block;
@@ -94,7 +94,7 @@ body {
 				a {
 					padding-bottom: 0.75em;
 					text-transform: uppercase;
-					color: @main-color;
+					color: main-color;
 					font-size: 0.875em;
 					&:hover {
 						color: #1d1b15;
@@ -114,7 +114,7 @@ body {
 /* Section-1 Styles */
 #section-1 {
 	height: 38em;
-	color: @main-color;
+	color: main-color;
 	background-color: #222;
 	.content-slider {
 		position: relative;
@@ -145,7 +145,7 @@ body {
 					box-sizing: border-box;
 					h2 {
 						padding-bottom: 0.3em;
-						font-family: @h3-font;
+						font-family: h3-font;
 						font-weight: 400;
 						font-size: 2.5em;
 						text-transform: none;
@@ -159,7 +159,7 @@ body {
 							width: 4em;
 							height: 0.1875em;
 							margin: 2.5em auto;
-							background: @main-color;
+							background: main-color;
 					}
 					.learn-more-button {
 						padding-bottom: 5em;
@@ -167,11 +167,11 @@ body {
 						a {
 							padding: 0.5em 2em;
 							text-align: center;
-							font-family: @main-font;
+							font-family: main-font;
 							font-size: 0.875em;
-							color: @main-color;
+							color: main-color;
 							text-transform: uppercase;
-							border: 0.1875em solid @main-color;
+							border: 0.1875em solid main-color;
 							&:hover {
 								color: #e88382;
 								border-color: #e88382;
@@ -196,8 +196,8 @@ body {
 				display: block;
 				width: 70%;
 				margin: 0 auto;
-				font-family: @main-font;
-				color: @main-color;
+				font-family: main-font;
+				color: main-color;
 				label {
 					position: relative;
 					display: inline-block;
@@ -208,7 +208,7 @@ body {
 					padding-top: 1em;
 					text-align: left;
 					text-transform: uppercase;
-					font-family: @main-font;
+					font-family: main-font;
 					font-size: 1em;
 					color: #f6eac5;
 					font-weight: 400;
@@ -250,14 +250,14 @@ body {
 		#banner3:checked ~ nav label:nth-of-type(3),
 		#banner4:checked ~ nav label:nth-of-type(4) {
 			cursor: default;
-			color: @main-color;
+			color: main-color;
 			transition: all .5s;
 		}
 		#banner1:checked ~ nav label:nth-of-type(1) .progressbar,
 		#banner2:checked ~ nav label:nth-of-type(2) .progressbar,
 		#banner3:checked ~ nav label:nth-of-type(3) .progressbar,
 		#banner4:checked ~ nav label:nth-of-type(4) .progressbar {
-			background: @main-color;
+			background: main-color;
 		}
 		#banner1:checked ~ nav label:nth-of-type(1) .progressbar-fill,
 		#banner2:checked ~ nav label:nth-of-type(2) .progressbar-fill,
