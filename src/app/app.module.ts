@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './Components/home/home.component';
 import { TiendaComponent } from './Components/tienda/tienda.component';
@@ -13,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AboutComponent } from './Components/about/about.component';
+import { Route } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,7 @@ import { AboutComponent } from './Components/about/about.component';
     RegistroComponent,
     ProductSearchComponent,
     AboutComponent,
-   
+
   ],
   imports: [
     BrowserModule,

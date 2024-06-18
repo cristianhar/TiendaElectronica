@@ -35,7 +35,16 @@
         </p>
       </div>
     </div>
-    <br>
-    <img src="../../../assets/img.jpg" />
+    <div class="image-wrapper">
+      <img
+        src="../../../assets/img.jpg"
+        alt="Team Image"
+        (click)="handleImageClick()"
+      />
+      <!-- Corazones emoji dentro del contenedor de la imagen -->
+      <div class="hearts-container">
+        <div class="heart-emoji">❤️</div>
+      </div>
+    </div>
   </div>
 </section>
