@@ -8,11 +8,11 @@
           alt="illustration"
           class="illustration"
         />
-        <h1 class="opacity">LOGIN</h1>
+        <h1 class="opacity">Inicio de sesión</h1>
         <form class="form" (ngSubmit)="logearse()">
           <input
             type="text"
-            placeholder="USERNAME"
+            placeholder="Nombre de usuario"
             [(ngModel)]="username"
             name="username"
             required
@@ -20,16 +20,16 @@
           />
           <input
             type="password"
-            placeholder="PASSWORD"
+            placeholder="Contraseña"
             [(ngModel)]="password"
             name="password"
             required
             class="form-control"
           />
-          <button type="submit" class="opacity">SUBMIT</button>
+          <button type="submit" class="opacity">Enviar</button>
         </form>
         <div class="register-forget opacity">
-          <a class="btn btn-secondary" (click)="formularioRegistro()">REGISTER</a>
+          <a class="btn btn-secondary" (click)="formularioRegistro()">Registrarse</a>
         </div>
       </div>
       <div class="circle circle-two"></div>

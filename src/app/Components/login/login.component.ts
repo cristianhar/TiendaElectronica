@@ -38,7 +38,7 @@ export class LoginComponent {
     this.modalService.open(ModalLoginExitoso);
   }
 
-  
+
   mostrarModalLoginFallido(): void {
     this.modalService.open(ModalLoginFallido);
   }
@@ -48,7 +48,7 @@ export class LoginComponent {
 @Component({
   template: `
     <div class="modal-body">
-      <p>¡Inicio de sesión exitoso!</p>
+      <p style="color: black;">¡Inicio de sesión exitoso!</p>
     </div>
   `
 })

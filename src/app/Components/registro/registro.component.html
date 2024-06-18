@@ -3,9 +3,8 @@
     <div class="login-container registro-box">
       <div class="circle circle-one"></div>
       <div class="form-container form">
-
         <h1>Registro</h1>
-        <form (submit)="registrarse()">
+        <form (ngSubmit)="registrarse()">
           <div class="form-group">
             <label for="username">Usuario:</label>
             <input
@@ -125,7 +124,9 @@
               placeholder="M/F"
             />
           </div>
-          <button type="submit" class="opacity btn btn-primary">Registrarse</button>
+          <button type="submit" class="opacity btn btn-primary">
+            Registrarse
+          </button>
         </form>
       </div>
       <div class="circle circle-two"></div>
@@ -138,33 +139,33 @@
       {
         background: "#1A1A2E",
         color: "#FFFFFF",
-        primaryColor: "#0F3460"
+        primaryColor: "#0F3460",
       },
       {
         background: "#461220",
         color: "#FFFFFF",
-        primaryColor: "#E94560"
+        primaryColor: "#E94560",
       },
       {
         background: "#192A51",
         color: "#FFFFFF",
-        primaryColor: "#967AA1"
+        primaryColor: "#967AA1",
       },
       {
         background: "#F7B267",
         color: "#000000",
-        primaryColor: "#F4845F"
+        primaryColor: "#F4845F",
       },
       {
         background: "#F25F5C",
         color: "#000000",
-        primaryColor: "#642B36"
+        primaryColor: "#642B36",
       },
       {
         background: "#231F20",
         color: "#FFF",
-        primaryColor: "#BB4430"
-      }
+        primaryColor: "#BB4430",
+      },
     ];
 
     const setTheme = (theme) => {

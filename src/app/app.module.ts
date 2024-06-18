@@ -12,6 +12,7 @@ import { ProductSearchComponent } from './Components/product-search/product-sear
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AboutComponent } from './Components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     LoginComponent,
     RegistroComponent,
     ProductSearchComponent,
+    AboutComponent,
    
   ],
   imports: [

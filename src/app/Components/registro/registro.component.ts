@@ -65,7 +65,8 @@ export class RegistroComponent {
 @Component({
   template: `
     <div class="modal-body">
-      <p>¡Registro exitoso!</p>
+      <p style="color: black">¡Registro exitoso!</p>
+      <p style="color: black">Ahora inicia sesión</p>
     </div>
   `
 })
